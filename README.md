@@ -29,14 +29,14 @@ Adds a new expense with details about participants and amounts owed.
     }
   ]
 }
-### Response Body
+ Response Body
 ```json
 {
   "message": "Expense added successfully!",
   "expenseId": "expense_id_here"
 }
 
-### Get Expenses for a Specific User
+ Get Expenses for a Specific User
 Endpoint
 GET /api/expenses/user/:userId
 
