@@ -145,3 +145,13 @@ Downloads an Excel file containing the balance sheet of expenses.
 
 ### Response
 The response will be an Excel file containing the balance sheet data.
+
+
+<img width="1440" alt="Screenshot 2024-10-21 at 12 32 21 PM" src="https://github.com/user-attachments/assets/3bbee8ea-8c61-46b3-9a76-6f0aac63e78e">
+<img width="1440" alt="Screenshot 2024-10-21 at 12 01 03 PM" src="https://github.com/user-attachments/assets/0cc7e2e1-baa6-46cc-8a29-822dc7dd29a3">
+<img width="1440" alt="Screenshot 2024-10-21 at 12 01 04 PM" src="https://github.com/user-attachments/assets/73028ac5-9ece-47b6-ace2-37f7b6155734">
+<img width="1440" alt="Screenshot 2024-10-21 at 12 01 06 PM" src="https://github.com/user-attachments/assets/c2a19216-c51e-46c1-86a5-949491fc4405">
+<img width="1440" alt="Screenshot 2024-10-21 at 12 02 19 PM" src="https://github.com/user-attachments/assets/20b6afd0-9adb-45d1-9c41-a322409b45e7">
+<img width="1440" alt="Screenshot 2024-10-21 at 12 27 00 PM" src="https://github.com/user-attachments/assets/552cb327-3177-4632-9f05-45c7268d434e">
+<img width="1440" alt="Screenshot 2024-10-21 at 12 27 21 PM" src="https://github.com/user-attachments/assets/05d7df90-ab4f-4915-b73e-99ddd5a0e0b7">
+
