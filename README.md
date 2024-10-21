@@ -16,8 +16,6 @@ This is a simple Expense Sharing and Tracking application. It allows users to ad
 To get started with this project, you need to have Node.js and MongoDB installed on your machine. You can follow these steps:
 
 ### Clone the Repository:
-
-```bash
 git clone <repository-url>
 
 
