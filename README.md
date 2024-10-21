@@ -1,33 +1,22 @@
-# Expense Sharing and Tracking App
-
-This is a simple Expense Sharing and Tracking application. It allows users to add expenses, track their personal expenses, and view overall expenses. The application is built using Node.js, Express, and MongoDB.
+# Expense Sharing and Tracking App - API Documentation
 
 ## Table of Contents
-- [Getting Started](#getting-started)
-- [APIs](#apis)
-- [How It Works](#how-it-works)
-- [Folder Structure](#folder-structure)
-- [Running the Application](#running-the-application)
-- [Technologies Used](#technologies-used)
-- [Conclusion](#conclusion)
+- [Add a New Expense](#add-a-new-expense)
+- [Get Expenses for a Specific User](#get-expenses-for-a-specific-user)
+- [Get Overall Expenses](#get-overall-expenses)
+- [Get Balance Sheet](#get-balance-sheet)
 
-## Getting Started
-## Installation Instructions
+## Add a New Expense
 
-To install the necessary packages and set up the application, follow these steps:
+### Endpoint
+`POST /api/expenses`
 
-1. Ensure you have Node.js and MongoDB installed.
-2. Clone the repository:
+### Description
+Adds a new expense with details about participants and amounts owed.
 
-   ```bash
-   git clone <repository-url>
-## Examples
-
-### Adding an Expense
-**Request:**
-
-```bash
-curl -X POST http://localhost:8000/api/expenses -H "Content-Type: application/json" -d '{
+### Request Body
+```json
+{
   "amount": 100,
   "participants": [
     {
@@ -39,7 +28,104 @@ curl -X POST http://localhost:8000/api/expenses -H "Content-Type: application/js
       "amountOwed": 50
     }
   ]
-}'
+}
+### Response Body
+```json
+{
+  "message": "Expense added successfully!",
+  "expenseId": "expense_id_here"
+}
 
+### Get Expenses for a Specific User
+Endpoint
+GET /api/expenses/user/:userId
 
+Description
+Retrieves all expenses for a specific user.
 
+Request Parameters
+userId: The ID of the user to get expenses for.
+{
+  "expenses": [
+    {
+      "expenseId": "expense_id_1",
+      "amount": 100,
+      "participants": [
+        {
+          "userId": "user1_id",
+          "amountOwed": 50
+        },
+        {
+          "userId": "user2_id",
+          "amountOwed": 50
+        }
+      ],
+      "createdAt": "2024-10-21T12:00:00Z"
+    },
+    {
+      "expenseId": "expense_id_2",
+      "amount": 200,
+      "participants": [
+        {
+          "userId": "user1_id",
+          "amountOwed": 100
+        },
+        {
+          "userId": "user3_id",
+          "amountOwed": 100
+        }
+      ],
+      "createdAt": "2024-10-21T13:00:00Z"
+    }
+  ]
+}
+Get Overall Expenses
+Endpoint
+GET /api/expenses
+
+Description
+Retrieves all expenses across users.
+{
+  "totalExpenses": 300,
+  "expenses": [
+    {
+      "expenseId": "expense_id_1",
+      "amount": 100,
+      "participants": [
+        {
+          "userId": "user1_id",
+          "amountOwed": 50
+        },
+        {
+          "userId": "user2_id",
+          "amountOwed": 50
+        }
+      ],
+      "createdAt": "2024-10-21T12:00:00Z"
+    },
+    {
+      "expenseId": "expense_id_2",
+      "amount": 200,
+      "participants": [
+        {
+          "userId": "user1_id",
+          "amountOwed": 100
+        },
+        {
+          "userId": "user3_id",
+          "amountOwed": 100
+        }
+      ],
+      "createdAt": "2024-10-21T13:00:00Z"
+    }
+  ]
+}
+Get Balance Sheet
+Endpoint
+GET /api/expenses/balance-sheet
+
+Description
+Downloads an Excel file containing the balance sheet of expenses.
+
+Response
+The response will be an Excel file containing the balance sheet data.
