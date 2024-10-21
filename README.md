@@ -12,10 +12,34 @@ This is a simple Expense Sharing and Tracking application. It allows users to ad
 - [Conclusion](#conclusion)
 
 ## Getting Started
+## Installation Instructions
 
-To get started with this project, you need to have Node.js and MongoDB installed on your machine. You can follow these steps:
+To install the necessary packages and set up the application, follow these steps:
 
-### Clone the Repository:
-git clone <repository-url>
+1. Ensure you have Node.js and MongoDB installed.
+2. Clone the repository:
+
+   ```bash
+   git clone <repository-url>
+## Examples
+
+### Adding an Expense
+**Request:**
+
+```bash
+curl -X POST http://localhost:8000/api/expenses -H "Content-Type: application/json" -d '{
+  "amount": 100,
+  "participants": [
+    {
+      "userId": "user1_id",
+      "amountOwed": 50
+    },
+    {
+      "userId": "user2_id",
+      "amountOwed": 50
+    }
+  ]
+}'
+
 
 
