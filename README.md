@@ -29,22 +29,29 @@ Adds a new expense with details about participants and amounts owed.
     }
   ]
 }
- Response Body
+```
+
+### Response Body
 ```json
 {
   "message": "Expense added successfully!",
   "expenseId": "expense_id_here"
 }
+```
 
- Get Expenses for a Specific User
-Endpoint
-GET /api/expenses/user/:userId
+## Get Expenses for a Specific User
 
-Description
+### Endpoint
+`GET /api/expenses/user/:userId`
+
+### Description
 Retrieves all expenses for a specific user.
 
-Request Parameters
-userId: The ID of the user to get expenses for.
+### Request Parameters
+- `userId`: The ID of the user to get expenses for.
+
+### Response Body
+```json
 {
   "expenses": [
     {
@@ -79,12 +86,18 @@ userId: The ID of the user to get expenses for.
     }
   ]
 }
-Get Overall Expenses
-Endpoint
-GET /api/expenses
+```
 
-Description
+## Get Overall Expenses
+
+### Endpoint
+`GET /api/expenses`
+
+### Description
 Retrieves all expenses across users.
+
+### Response Body
+```json
 {
   "totalExpenses": 300,
   "expenses": [
@@ -120,12 +133,15 @@ Retrieves all expenses across users.
     }
   ]
 }
-Get Balance Sheet
-Endpoint
-GET /api/expenses/balance-sheet
+```
 
-Description
+## Get Balance Sheet
+
+### Endpoint
+`GET /api/expenses/balance-sheet`
+
+### Description
 Downloads an Excel file containing the balance sheet of expenses.
 
-Response
+### Response
 The response will be an Excel file containing the balance sheet data.
